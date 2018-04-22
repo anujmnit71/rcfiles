@@ -18,7 +18,7 @@ alias mvn='mvn.cmd'
 alias python27='/drives/C/SoftwareInstall/Python27/python.exe'
 alias python34='/drives/C/SoftwareInstall/Python34/python.exe'
 alias pip27='/drives/c/SoftwareInstall/Python27/Scripts/pip.exe'
-alias pip27='/drives/c/SoftwareInstall/WinMerge/WinMergeU.exe'
+alias WinMergeU='/drives/c/SoftwareInstall/WinMerge/WinMergeU.exe'
 function open_opengrok {
 	pushd /drives/e/grokit-master_working/src/
 	python27 grokit.py --action=start
