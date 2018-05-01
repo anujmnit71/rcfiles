@@ -8,19 +8,39 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/git
+~MSle0~/g
 
 # Last Substitute Search Pattern:
-~MSle0&RECYCLE.BIN
+~MSle0&^\*
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
+:q
 :wq
+:tabe ~/.bash_aliases
+:Q
+:%s/^\s*//:
+:g!/@author/d:g
+:wqa
+:tabe annotation2.txt
+:g/^\*/d
+:%s/^\s*//
+:!dos2unix annotation1.txt
+:g/@author/d
+:g!/@author/d
+:g!/@author/
+:g!/^import/d
+:g!/^import/dv
+:g/^import/dv
+:gv/^import/d
+:!g/^import/d
+:%s/Author: Pieter Hintjens//n
+:qa
+:t clone https:t clone https:
 :Wq
 :w
-:q
 :edit!
 :tabe ~/.bash_history
 :g/RECYCLE.BIN/d
@@ -74,7 +94,6 @@ $
 :g/\.svn/d
 :g!/\./d
 :g!/./d
-:Q
 :%s/md5sum "//g 
 :%s/"$//g 
 :%s/$"//g 
@@ -83,7 +102,6 @@ $
 :%s/md5sum/md5sum "/g 
 :%s/md5sum/md5sum /g 
 :%s/^/md5sum/g 
-:tabe ~/.bash_aliases
 :%s/e_backup12//n
 :%s/RECYCLE.BIN//n
 :g/RECYCLE.BIN/n
@@ -174,8 +192,21 @@ $
 :g/question/d
 
 # Search String History (newest to oldest):
-?/drives/c/SoftwareInstall/WinMerge/
+?/g
+?/gc
+?/PathVaria
+? ^\*
+? ^\s*
+?/gmail
+? @author
+? ^import
+? Author: Pieter Hintjens
+?/Author: Pieter Hintjens
+?/hintje
+?/tail
+?/libz
 ?/git
+?/drives/c/SoftwareInstall/WinMerge/
 ?/pip
 ?/gdb -
 ? RECYCLE.BIN
@@ -354,7 +385,6 @@ $
 ?/75
 ? \s\+$
 ? \d
-? ^\s*
 ? ^\s
 ?/^\s
 ?/^\d
@@ -415,45 +445,98 @@ $
 
 # Registers:
 "0	LINE	0
-	alias pip27='/drives/c/SoftwareInstall/Python27/Scripts/pip.exe'
-""1	LINE	0
-	/drives/c/SoftwareInstall/WinMerge/
+	alias gdb='/drives/e/anuj_hd_data/software/mingw-w64/x86_64/mingw64/bin/gdb.exe'
+"1	LINE	0
+	//    @Test
 "2	LINE	0
-	
+	* {@link RowMapper} implementation mapping data from a {@link ResultSet} to the corresponding properties
 "3	LINE	0
-	
+	* {@link ResultSetExtractor} implementation by using the
 "4	LINE	0
-	end
+	* {@link OneToManyResultSetExtractor} of Spring Data Core JDBC Extensions.
 "5	LINE	0
-	register_libstdcxx_printers (None)
+	* we don't need to perform application context lookups. See the use of {@link Autowired @Autowired} on the <code>{@link
 "6	LINE	0
-	from libstdcxx.v6.printers import register_libstdcxx_printers
+	* of the {@link Visit} class.
 "7	LINE	0
-	print "hello world anuj"    
+	* of the {@link JdbcPet} class.
 "8	LINE	0
-	sys.path.insert(0,'E:/anuj_hd_data/software/mingw-w64/x86_64/mingw64/share/gcc-6.3.0/python')
+	* is no need for a teardown or cleanup script. <li> An {@link org.springframework.context.ApplicationContext
 "9	LINE	0
-	import sys
+	* configuration using {@link ContextConfiguration @ContextConfiguration} annotation </p> <p>
 "q@	CHAR	0
 	€kdA
-"-	CHAR	0
-	6
+""-	CHAR	0
+	b
 
 # File marks:
-'0  21  60  ~/.bash_aliases
-'1  4  18  /drives/e/grokit-master_working/src/grokit_files/opengrok-0.12.1/bin/opengrok_config.sh
-'2  3  5  /drives/e/grokit-master_working/src/grokit_files/opengrok-0.12.1/bin/opengrok_config.sh
-'3  16  47  ~/.bash_aliases
-'4  1  0  ~/.bash_aliases
-'5  1  0  /drives/e/grokit-master_working/src/grokit_files/apache-tomcat-8.0.8/conf/tomcat-users.xml
-'6  20  10  ~/.bash_aliases
-'7  1  0  /drives/e/anuj_hd_data/oops_project/a.txt
-'8  1  0  /drives/e/anuj_hd_data/software/mingw-w64/x86_64/mingw64/bin/.gdbinit_sample
-'9  9  0  ~/.gdbinit
+'0  1  0  ~/.bash_history
+'1  1  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation1.txt
+'2  130  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation2.txt
+'3  9  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation1.txt
+'4  1  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation.txt
+'5  46  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation.txt
+'6  128  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation.txt
+'7  226  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation1.txt
+'8  377  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation1.txt
+'9  15  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation.txt
 
 # Jumplist (newest first):
--'  21  60  ~/.bash_aliases
+-'  1  0  ~/.bash_history
+-'  1  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation1.txt
+-'  130  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation2.txt
+-'  9  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation1.txt
+-'  60  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation1.txt
+-'  11  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation1.txt
+-'  1  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation.txt
+-'  46  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation.txt
+-'  106  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation.txt
+-'  107  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation.txt
+-'  128  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation.txt
+-'  22  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation.txt
+-'  226  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation1.txt
+-'  375  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation1.txt
+-'  377  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation1.txt
+-'  67  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation1.txt
+-'  17  4  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation1.txt
+-'  15  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation.txt
+-'  17  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation.txt
+-'  7  0  /drives/c/Users/anuj_k_Verma/Desktop/1.txt
+-'  85  0  /drives/c/Users/anuj_k_Verma/Desktop/1.txt
+-'  2  0  /drives/c/Users/anuj_k_Verma/Desktop/1.txt
+-'  1  0  /drives/c/Users/anuj_k_Verma/Desktop/1.txt
+-'  1  0  /drives/c/Users/anuj_k_Verma/Desktop/1
+-'  16049  0  /drives/e/anuj_hd_data/oops_project/zeromq/a
+-'  16022  0  /drives/e/anuj_hd_data/oops_project/zeromq/a
+-'  15949  0  /drives/e/anuj_hd_data/oops_project/zeromq/a
+-'  15940  0  /drives/e/anuj_hd_data/oops_project/zeromq/a
+-'  15925  0  /drives/e/anuj_hd_data/oops_project/zeromq/a
+-'  15801  0  /drives/e/anuj_hd_data/oops_project/zeromq/a
+-'  15704  0  /drives/e/anuj_hd_data/oops_project/zeromq/a
+-'  15697  0  /drives/e/anuj_hd_data/oops_project/zeromq/a
+-'  15673  0  /drives/e/anuj_hd_data/oops_project/zeromq/a
+-'  15588  0  /drives/e/anuj_hd_data/oops_project/zeromq/a
+-'  15580  0  /drives/e/anuj_hd_data/oops_project/zeromq/a
+-'  15560  0  /drives/e/anuj_hd_data/oops_project/zeromq/a
+-'  15422  0  /drives/e/anuj_hd_data/oops_project/zeromq/a
+-'  15358  0  /drives/e/anuj_hd_data/oops_project/zeromq/a
+-'  14805  15  /drives/e/anuj_hd_data/oops_project/zeromq/a
+-'  14618  34  /drives/e/anuj_hd_data/oops_project/zeromq/a
+-'  53192  0  /drives/e/anuj_hd_data/oops_project/zeromq/a
+-'  319  4  /drives/e/anuj_hd_data/oops_project/zeromq/a
+-'  1  0  /drives/e/anuj_hd_data/oops_project/zeromq/a
 -'  1  0  ~/.bash_aliases
+-'  35  101  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  11052  0  ~/.bash_history
+-'  11082  0  ~/.bash_history
+-'  16  6  /home/Anuj_K_Verma/rcfiles/.bash_aliases
+-'  1  0  /home/Anuj_K_Verma/rcfiles/.bash_aliases
+-'  5  0  /home/Anuj_K_Verma/rcfiles/l
+-'  1  0  /home/Anuj_K_Verma/rcfiles/l
+-'  21324  4  /drives/e/anuj_hd_data/oops_project/apache_nutch/l
+-'  1  0  /drives/e/anuj_hd_data/oops_project/apache_nutch/l
+-'  21  14  ~/.bash_aliases
 -'  4  18  /drives/e/grokit-master_working/src/grokit_files/opengrok-0.12.1/bin/opengrok_config.sh
 -'  1  0  /drives/e/grokit-master_working/src/grokit_files/opengrok-0.12.1/bin/opengrok_config.sh
 -'  3  5  /drives/e/grokit-master_working/src/grokit_files/opengrok-0.12.1/bin/opengrok_config.sh
@@ -466,7 +549,6 @@ $
 -'  1  0  /drives/e/anuj_hd_data/software/mingw-w64/x86_64/mingw64/bin/.gdbinit_sample
 -'  9  0  ~/.gdbinit
 -'  1  0  ~/.gdbinit
--'  1  0  ~/.bashrc
 -'  20  0  /drives/e/file_logs/all_file_d_path.txt
 -'  1  0  /drives/e/file_logs/all_file_d_path.txt
 -'  1422  46  /drives/e/anuj_data/all_docx.txt
@@ -497,75 +579,89 @@ $
 -'  1321  46  /drives/e/anuj_data/all_docx.txt
 -'  1320  46  /drives/e/anuj_data/all_docx.txt
 -'  1319  46  /drives/e/anuj_data/all_docx.txt
--'  1318  46  /drives/e/anuj_data/all_docx.txt
--'  1317  46  /drives/e/anuj_data/all_docx.txt
--'  1316  46  /drives/e/anuj_data/all_docx.txt
--'  1315  46  /drives/e/anuj_data/all_docx.txt
--'  1314  46  /drives/e/anuj_data/all_docx.txt
--'  1313  46  /drives/e/anuj_data/all_docx.txt
--'  1312  46  /drives/e/anuj_data/all_docx.txt
--'  1311  46  /drives/e/anuj_data/all_docx.txt
--'  1310  46  /drives/e/anuj_data/all_docx.txt
--'  1309  46  /drives/e/anuj_data/all_docx.txt
--'  1308  46  /drives/e/anuj_data/all_docx.txt
--'  1307  46  /drives/e/anuj_data/all_docx.txt
--'  1306  46  /drives/e/anuj_data/all_docx.txt
--'  1305  46  /drives/e/anuj_data/all_docx.txt
--'  1304  46  /drives/e/anuj_data/all_docx.txt
--'  1303  46  /drives/e/anuj_data/all_docx.txt
--'  1302  46  /drives/e/anuj_data/all_docx.txt
--'  1301  46  /drives/e/anuj_data/all_docx.txt
--'  1300  46  /drives/e/anuj_data/all_docx.txt
--'  1299  46  /drives/e/anuj_data/all_docx.txt
--'  1298  46  /drives/e/anuj_data/all_docx.txt
--'  1297  46  /drives/e/anuj_data/all_docx.txt
--'  1296  46  /drives/e/anuj_data/all_docx.txt
--'  1295  46  /drives/e/anuj_data/all_docx.txt
--'  1294  46  /drives/e/anuj_data/all_docx.txt
--'  1293  46  /drives/e/anuj_data/all_docx.txt
--'  1292  46  /drives/e/anuj_data/all_docx.txt
--'  1291  46  /drives/e/anuj_data/all_docx.txt
--'  1290  46  /drives/e/anuj_data/all_docx.txt
--'  1289  46  /drives/e/anuj_data/all_docx.txt
--'  1288  46  /drives/e/anuj_data/all_docx.txt
--'  1287  46  /drives/e/anuj_data/all_docx.txt
--'  1286  46  /drives/e/anuj_data/all_docx.txt
--'  1285  46  /drives/e/anuj_data/all_docx.txt
--'  1284  46  /drives/e/anuj_data/all_docx.txt
--'  1283  46  /drives/e/anuj_data/all_docx.txt
--'  1282  46  /drives/e/anuj_data/all_docx.txt
--'  1281  46  /drives/e/anuj_data/all_docx.txt
--'  1280  46  /drives/e/anuj_data/all_docx.txt
--'  1279  46  /drives/e/anuj_data/all_docx.txt
--'  1278  46  /drives/e/anuj_data/all_docx.txt
--'  1277  46  /drives/e/anuj_data/all_docx.txt
--'  1276  46  /drives/e/anuj_data/all_docx.txt
--'  1275  46  /drives/e/anuj_data/all_docx.txt
--'  1274  46  /drives/e/anuj_data/all_docx.txt
--'  1273  46  /drives/e/anuj_data/all_docx.txt
--'  1272  46  /drives/e/anuj_data/all_docx.txt
--'  1271  46  /drives/e/anuj_data/all_docx.txt
--'  1270  46  /drives/e/anuj_data/all_docx.txt
--'  1269  46  /drives/e/anuj_data/all_docx.txt
--'  1268  46  /drives/e/anuj_data/all_docx.txt
--'  1267  46  /drives/e/anuj_data/all_docx.txt
--'  1266  46  /drives/e/anuj_data/all_docx.txt
--'  1265  46  /drives/e/anuj_data/all_docx.txt
+-'  130  0  /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation2.txt
 
 # History of marks within files (newest to oldest):
 
+> ~/.bash_history
+	"	1	0
+
 > ~/.bash_aliases
-	"	21	60
-	^	21	61
-	.	21	61
+	"	13	74
+	^	13	75
+	.	13	75
 	+	1	37
 	+	3	9
 	+	2	0
 	+	3	66
-	+	20	10
-	+	16	48
-	+	21	0
-	+	21	61
+	+	22	10
+	+	18	48
+	+	23	0
+	+	23	15
+	+	12	0
+	+	13	0
+	+	12	8
+	+	13	8
+	+	12	75
+	+	13	75
+
+> /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation1.txt
+	"	1	0
+	.	106	0
+	+	1	0
+	+	20	0
+	+	375	0
+	+	1	0
+	+	67	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	106	0
+
+> /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation2.txt
+	"	130	0
+
+> /drives/e/anuj_hd_data/oops_project/spring_petclinic_REST/annotation.txt
+	"	1	0
+	.	105	0
+	+	1	0
+	+	614	0
+	+	1	0
+	+	10	0
+	+	107	0
+	+	105	0
+
+> /drives/c/Users/anuj_k_Verma/Desktop/1.txt
+	"	7	0
+	.	1070	0
+	+	1070	0
+
+> /drives/c/Users/anuj_k_Verma/Desktop/1
+	"	1	0
+
+> /drives/e/anuj_hd_data/oops_project/zeromq/a
+	"	16049	0
+
+> ~/.bashrc
+	"	35	101
+	^	35	1
+	.	35	0
+	+	88	0
+	+	90	48
+	+	89	0
+	+	90	17
+	+	89	0
+	+	35	0
+	v	90	6
+
+> /home/Anuj_K_Verma/rcfiles/.bash_aliases
+	"	16	6
+
+> /home/Anuj_K_Verma/rcfiles/l
+	"	5	0
+
+> /drives/e/anuj_hd_data/oops_project/apache_nutch/l
+	"	21324	4
 
 > /drives/e/grokit-master_working/src/grokit_files/opengrok-0.12.1/bin/opengrok_config.sh
 	"	4	18
@@ -597,20 +693,6 @@ $
 	.	8	3
 	+	1	25
 	+	8	3
-
-> ~/.bashrc
-	"	1	0
-	^	89	1
-	.	89	0
-	+	88	0
-	+	90	48
-	+	89	0
-	+	90	17
-	+	89	0
-	v	90	6
-
-> ~/.bash_history
-	"	9872	0
 
 > /etc/bash_completion
 	"	2	0
@@ -1032,32 +1114,3 @@ $
 	^	1	0
 	.	1	0
 	+	1	0
-
-> /drives/c/Users/anuj_k_verma/Downloads/anuj/string_vector/StanfordCPPLib/StanfordCPPLib/gobjects.h
-	"	1	0
-
-> /drives/c/Users/anuj_k_verma/Downloads/anuj/string_vector/StanfordCPPLib/StanfordCPPLib/lexicon.h
-	"	1	0
-
-> /drives/c/Users/anuj_k_verma/Downloads/anuj/string_vector/StanfordCPPLib/StanfordCPPLib/tokenscanner.h
-	"	49	0
-
-> /drives/c/Users/anuj_k_verma/Downloads/anuj/string_vector/StanfordCPPLib/StanfordCPPLib/bitstream.h
-	"	207	32
-
-> /drives/c/Users/anuj_k_verma/Downloads/anuj/string_vector/StanfordCPPLib/StanfordCPPLib/dawglexicon.h
-	"	1	0
-
-> /drives/c/Users/anuj_k_verma/Downloads/anuj/string_vector/Programming-code/Chapter23/chapter.23.9-2.cpp
-	"	31	0
-
-> /drives/c/Users/anuj_k_verma/Downloads/anuj/string_vector/Programming-code/Chapter23/chapter.23.2.cpp
-	"	99	0
-
-> /drives/c/Users/anuj_k_verma/Downloads/anuj/string_vector/vectortxt.txt
-	"	46	46
-
-> /drives/c/Users/anuj_k_verma/Downloads/anuj/string_vector/stacktxt.txt
-	"	9	0
-	.	2	0
-	+	2	0
