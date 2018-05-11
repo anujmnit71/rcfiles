@@ -60,8 +60,16 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 . /etc/bash_completion
 fi
 
-bind '"\e[A": history-search-backward'
+#Press Ctrl+V and then press the key , it will show its coding e.g. :
+#upkey : ^[[A
+#ctrl+left : ^[[1;5D
+#ctrl+right : ^[[1;5C
+# ^[ is represented by \e
+
+bind '"\e[A": history-search-backward' 
 bind '"\e[B": history-search-forward'
+bind '"\e[1;5C": forward-word'
+bind '"\e[1;5D": backward-word'
 
 #Acquire::http::proxy "http://10.116.2.243:80/";
 #Acquire::https::proxy "https://10.116.2.243:80/";

@@ -13,6 +13,8 @@ alias g++='/drives/e/anuj_hd_data/software/mingw-w64/x86_64/mingw64/bin/g++.exe'
 alias gcc='/drives/e/anuj_hd_data/software/mingw-w64/x86_64/mingw64/bin/gcc.exe'
 alias g++11='g++ -std=c++11'
 alias g++14='g++ -std=c++14'
+alias make='/drives/c/SoftwareInstall/cygwin64/bin/make.exe'
+alias cmake='/drives/c/SoftwareInstall/cmake/bin/cmake.exe'
 
 winhome='/drives/c/Users/anuj_k_Verma'
 alias 7z='/drives/c/SoftwareInstall/7-Zip/7z.exe'
@@ -76,11 +78,12 @@ cd_func ()
 
   #
   # Trim down everything beyond 11th entry
-  popd -n +15 2>/dev/null 1>/dev/null
+  limit=15
+  popd -n +$limit 2>/dev/null 1>/dev/null
 
   #
   # Remove any other occurence of this dir, skipping the top of the stack
-  for ((cnt=1; cnt <= 15; cnt++)); do
+  for ((cnt=1; cnt <= $limit; cnt++)); do
     x2=$(dirs +${cnt} 2>/dev/null)
     [[ $? -ne 0 ]] && return 0
     [[ ${x2:0:1} == '~' ]] && x2="${HOME}${x2:1}"
