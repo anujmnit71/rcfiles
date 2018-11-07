@@ -1,0 +1,6 @@
+[user]
+  name = Anuj K Verma
+  email = anujkumar@miqdigital.com
+
+[includeIf "gitdir:~/work/anuj_data/"]
+    path = ~/work/anuj_data/.gitconfig

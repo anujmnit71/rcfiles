@@ -1,0 +1,7 @@
+[include]
+  path = ~/gitconfig.d/color.txt
+  path = ~/gitconfig.d/core.txt
+  path = ~/gitconfig.d/merge.txt
+  path = ~/gitconfig.d/mergetool.txt
+  path = ~/gitconfig.d/user.txt
+  path = ~/gitconfig.d/credential.txt
