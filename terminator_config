@@ -1,0 +1,32 @@
+#rename to config and copy to ~/.config/terminator
+[global_config]
+  always_split_with_profile = True
+  focus = system
+  putty_paste_style = True
+  copy_on_selection = True
+  suppress_multiple_term_dialog = True
+  title_inactive_bg_color = "#ffffff"
+  title_inactive_fg_color = "#2e3436"
+  title_transmit_bg_color = "#d30102"
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = solarized-light-xterm
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+  [[solarized-light-xterm]]
+    background_color = "#fdf6e3"
+    copy_on_selection = True
+    cursor_color = "#aaaaaa"
+    foreground_color = "#657b83"
+    palette = "#000000:#cd0000:#73d216:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#73d216:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+    scrollback_infinite = True
+

@@ -1,0 +1,37 @@
+solarized light with xterm
+
+For gnome:
+[/]
+list=['e43ffba7-d13f-4aee-9711-7b6bd1ba19b1']
+default='e43ffba7-d13f-4aee-9711-7b6bd1ba19b1'
+
+[:e43ffba7-d13f-4aee-9711-7b6bd1ba19b1]
+foreground-color='rgb(101,123,131)'
+visible-name='anuj_solarized_light_xterm'
+palette=['rgb(0,0,0)', 'rgb(205,0,0)', 'rgb(18,170,18)', 'rgb(195,195,13)', 'rgb(0,0,238)', 'rgb(205,0,205)', 'rgb(0,205,205)', 'rgb(229,229,229)', 'rgb(127,127,127)', 'rgb(255,0,0)', 'rgb(11,162,11)', 'rgb(59,128,218)', 'rgb(92,92,255)', 'rgb(255,0,255)', 'rgb(0,255,255)', 'rgb(255,255,255)']
+cursor-colors-set=true
+highlight-colors-set=false
+use-theme-colors=false
+use-transparent-background=false
+use-theme-transparency=true
+scrollback-unlimited=false
+bold-color-same-as-fg=false
+background-color='rgb(253,246,227)'
+background-transparency-percent=0
+
+
+
+
+For terminator:
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+  [[solarized-light-xterm]]
+    background_color = "#fdf6e3"
+    copy_on_selection = True
+    cursor_color = "#aaaaaa"
+    foreground_color = "#657b83"
+    palette = "#000000:#cd0000:#73d216:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#73d216:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+    scrollback_infinite = True
+
+
