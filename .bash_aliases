@@ -1,18 +1,20 @@
 #!/bin/bash 
-alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # some more ls aliases
-alias ll='ls -alF'
+alias ls='ls --color=auto -1'
+alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
+workdir='/home/anujkumar/work'
+
 alias gdb='/drives/e/anuj_hd_data/software/mingw-w64/x86_64/mingw64/bin/gdb.exe'
 alias g++='/drives/e/anuj_hd_data/software/mingw-w64/x86_64/mingw64/bin/g++.exe'
 alias gcc='/drives/e/anuj_hd_data/software/mingw-w64/x86_64/mingw64/bin/gcc.exe'
 alias g++11='g++ -std=c++11'
-alias g++14='g++ -std=c++14'
+alias g++14='g++ -std=c++14'xmodmap -e "keycxmodmap -e "keycode 107 = End"ode 107 = End"
 alias make='/drives/c/SoftwareInstall/cygwin64/bin/make.exe'
 alias cmake='/drives/c/SoftwareInstall/cmake/bin/cmake.exe'
 
@@ -112,3 +114,38 @@ settitle ()
 { 
   echo -ne "\e]2;$@\a\e]1;$@\a"; 
 }
+
+extract () {
+   if [ -f $1 ] ; then
+       case $1 in
+	*.tar.bz2)	tar xvjf $1 && cd $(basename "$1" .tar.bz2) ;;
+	*.tar.gz)	tar xvzf $1 && cd $(basename "$1" .tar.gz) ;;
+	*.tar.xz)	tar Jxvf $1 && cd $(basename "$1" .tar.xz) ;;
+	*.bz2)		bunzip2 $1 && cd $(basename "$1" /bz2) ;;
+	*.rar)		unrar x $1 && cd $(basename "$1" .rar) ;;
+	*.gz)		gunzip $1 && cd $(basename "$1" .gz) ;;
+	*.tar)		tar xvf $1 && cd $(basename "$1" .tar) ;;
+	*.tbz2)		tar xvjf $1 && cd $(basename "$1" .tbz2) ;;
+	*.tgz)		tar xvzf $1 && cd $(basename "$1" .tgz) ;;
+	*.zip)		unzip $1 && cd $(basename "$1" .zip) ;;
+	*.Z)		uncompress $1 && cd $(basename "$1" .Z) ;;
+	*.7z)		7z x $1 && cd $(basename "$1" .7z) ;;
+	*)		echo "don't know how to extract '$1'..." ;;
+       esac
+   else
+       echo "'$1' is not a valid file!"
+   fi
+}
+
+function open_intellij {
+	pushd ~/work/software/idea/bin/
+	./idea.sh &
+	popd
+}
+parse_git_branch() {
+ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+#Map prtscr and insert to Home and End
+#xmodmap -e "keycode 107 = Home"
+#xmodmap -e "keycode 118 = End"
