@@ -79,6 +79,7 @@ xterm*|rxvt*)
 *)
     ;;
 esac
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -95,10 +96,10 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
+export JAVA_HOME='/home/anujkumar/work/software/jdk-8u181-linux-x64/jdk1.8.0_181/'
+export JDK_HOME='/home/anujkumar/work/software/jdk-8u181-linux-x64/jdk1.8.0_181/bin'
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+export PATH=$PATH:$JAVA_HOME:$JDK_HOME
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

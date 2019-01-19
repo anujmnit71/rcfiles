@@ -8,6 +8,9 @@ alias ls='ls --color=auto -1'
 alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
+#strip color from log4j output
+alias stripcolor='cat "$@" | sed -r "s/\x1B\[([0-9]{1,3}((;[0-9]{1,3})*)?)?[m|K]//g"'
+
 workdir='/home/anujkumar/work'
 
 alias gdb='/drives/e/anuj_hd_data/software/mingw-w64/x86_64/mingw64/bin/gdb.exe'
