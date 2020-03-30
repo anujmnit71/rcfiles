@@ -1,0 +1,5 @@
+[diff]
+    guitool = meld
+
+[difftool "meld"]
+    cmd = meld \"$LOCAL\" \"$REMOTE\" --label \"DIFF (REMOTE LOCAL)\"

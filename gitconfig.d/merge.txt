@@ -9,3 +9,5 @@
   # We like the `meld` tool that provides a GUI for merges.
 #  tool = meld-with-three-windows
   tool = meld
+  [mergetool "meld"]
+    cmd = meld --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output \"$MERGED\" --label \"MERGE (REMOTE MERGE LOCAL)\"

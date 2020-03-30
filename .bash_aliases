@@ -8,45 +8,10 @@ alias ls='ls --color=auto -1'
 alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
-#strip color from log4j output
+alias docker='sudo docker'
 alias stripcolor='cat "$@" | sed -r "s/\x1B\[([0-9]{1,3}((;[0-9]{1,3})*)?)?[m|K]//g"'
 
 workdir='/home/anujkumar/work'
-
-alias gdb='/drives/e/anuj_hd_data/software/mingw-w64/x86_64/mingw64/bin/gdb.exe'
-alias g++='/drives/e/anuj_hd_data/software/mingw-w64/x86_64/mingw64/bin/g++.exe'
-alias gcc='/drives/e/anuj_hd_data/software/mingw-w64/x86_64/mingw64/bin/gcc.exe'
-alias g++11='g++ -std=c++11'
-alias g++14='g++ -std=c++14'xmodmap -e "keycxmodmap -e "keycode 107 = End"ode 107 = End"
-alias make='/drives/c/SoftwareInstall/cygwin64/bin/make.exe'
-alias cmake='/drives/c/SoftwareInstall/cmake/bin/cmake.exe'
-
-winhome='/drives/c/Users/anuj_k_Verma'
-alias 7z='/drives/c/SoftwareInstall/7-Zip/7z.exe'
-alias notepad++='/drives/c/SoftwareInstall/Notepad++/notepad++.exe'
-alias git='/drives/c/SoftwareInstall/PortableGit/bin/git.exe'
-alias mvn='mvn.cmd'
-alias python27='/drives/C/SoftwareInstall/Python27/python.exe'
-alias python34='/drives/C/SoftwareInstall/Python34/python.exe'
-alias pip27='/drives/c/SoftwareInstall/Python27/Scripts/pip.exe'
-alias WinMergeU='/drives/c/SoftwareInstall/WinMerge/WinMergeU.exe'
-function open_opengrok {
-	pushd /drives/e/grokit-master_working/src/
-	python27 grokit.py --action=start
-	popd
-}
-
-function open_eclipse_cpp {
-	pushd /drives/e/anuj_hd_data/eclipse-cpp-mars-2-win32-x86_64/eclipse
-	./eclipse.exe &
-	popd
-}
-
-function open_eclipse_java {
-	pushd /drives/e/anuj_hd_data/eclipse-jee-mars-2-win32-x86_64/eclipse
-	./eclipse.exe &
-	popd
-}
 
 cd_func ()
 {
@@ -141,16 +106,35 @@ extract () {
 }
 
 function open_intellij {
-	pushd ~/work/software/idea/bin/
-	./idea.sh &
+	pushd ~/work/software/intellij_idea/bin/
+	./idea.sh >& intellij.log &
+	popd
+}
+function open_postman {
+	pushd ~/work/software/Postman706/Postman/
+	./Postman >& /dev/null &
 	popd
 }
 parse_git_branch() {
  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-
+git_fetch_log() {
+    fmt='ref=%(refname:short); up=%(upstream:short); t=%(upstream:track); ts=%(upstream:trackshort);'
+    git for-each-ref --shell --format="$fmt" refs/heads | \
+    while read entry; do
+      eval "$entry"
+      if test "z$ts" != 'z' && test "z$ts" != 'z='; then
+        echo -e "\n==== $ref $t\n"
+        git log --graph --left-right --decorate --abbrev-commit --date-order --boundary $@ $ref...$up
+      fi
+    done
+}
 #Map prtscr and insert to Home and End
-#xmodmap -e "keycode 107 = Home"
-#xmodmap -e "keycode 118 = End"
 #run this  to generate .Xmodmap
 #  xmodmap -pke >~/.Xmodmap
+xmodmap -e "keycode 107 = Home"
+xmodmap -e "keycode 118 = End"
+
+. ~/.maven_bash_completion.bash
+
+hr(){ printf '%0*d' $(tput cols) | tr 0 ${1:-_}; }

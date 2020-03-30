@@ -424,3 +424,4 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
+" autocmd BufRead,BufNewFile *.log set syntax=log4j
