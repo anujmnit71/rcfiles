@@ -84,24 +84,16 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[0
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
 fi
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
 export KAFKA_HOME='/home/anujkumar/work/software/kafka_2.11-2.0.0/bin'
 export CCLOUD_HOME='/home/anujkumar/work/software/ccloud-0.2.1/bin'
-export JAVA_HOME='/home/anujkumar/work/software/jdk-8u181-linux-x64/jdk1.8.0_181/'
-export JDK_HOME='/home/anujkumar/work/software/jdk-8u181-linux-x64/jdk1.8.0_181/bin'
-#export JAVA_HOME='/home/anujkumar/work/software/jdk/jdk-10_linux-x64_bin_ri/jdk-10'
-#export JDK_HOME='/home/anujkumar/work/software/jdk/jdk-10_linux-x64_bin_ri/jdk10/bin'
+# export JAVA_HOME='/home/anujkumar/work/software/jdk-8u181-linux-x64/jdk1.8.0_181/'
+# export JDK_HOME='/home/anujkumar/work/software/jdk-8u181-linux-x64/jdk1.8.0_181/bin'
 export INTELLIJ_HOME='/home/anujkumar/work/software/intellij_idea/bin'
 export GHZPATH='/home/anujkumar/work/software/ghz'
 export GOROOT='/usr/local/go'
@@ -111,12 +103,15 @@ export GRADLE_HOME='~/work/software/gradle_55/gradle-5.5'
 export PYIDE_HOME='/home/anujkumar/work/software/pycharm-community-2019.3.2/bin'
 export ECLIPSE_CPP_HOME='/home/anujkumar/work/software/eclipse_cpp'
 export PIP_HOME='/home/anujkumar/.local/bin'
-export M2_HOME='/home/anujkumar/work/software/apache-maven-3.5.4'
+export M2_HOME='/home/anujkumar/work/software/apache-maven-3.6.0'
 export M2=$M2_HOME/bin
 export MAVEN_OPTS='-Xms256m -Xmx1024m'
-# some more ls aliases
-export PATH=$PATH:$KAFKA_HOME:$JAVA_HOME:$CCLOUD_HOME:$JDK_HOME:$INTELLIJ_HOME:$GOPATH:$GOPATH/bin:$GOROOT/bin:$GHZPATH:${GRADLE_HOME}/bin:$PYIDE_HOME:$ECLIPSE_CPP_HOME:$PIP_HOME:$M2
+export PYCHARM_HOME='/home/anujkumar/work/software/pycharm-community-2019.3.2/bin'
 
+# some more ls aliases
+export PATH=$PATH:$KAFKA_HOME:$CCLOUD_HOME:$INTELLIJ_HOME:$GOPATH:$GOPATH/bin:$GOROOT/bin:$GHZPATH:${GRADLE_HOME}/bin:$PYIDE_HOME:$ECLIPSE_CPP_HOME:$PIP_HOME:$M2:$PYCHARM_HOME
+
+# export PATH=$PATH:$JAVA_HOME:$JDK_HOME
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -142,5 +137,3 @@ bind '"\e[B": history-search-forward'
 bind '"\e[1;5C": forward-word'
 bind '"\e[1;5D": backward-word'
 
-#Acquire::http::proxy "http://10.116.2.243:80/";
-#Acquire::https::proxy "https://10.116.2.243:80/";

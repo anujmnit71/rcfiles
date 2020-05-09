@@ -2,6 +2,7 @@
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+alias ffprobe='ffprobe -hide_banner'
 
 # some more ls aliases
 alias ls='ls --color=auto -1'
@@ -135,6 +136,14 @@ git_fetch_log() {
 xmodmap -e "keycode 107 = Home"
 xmodmap -e "keycode 118 = End"
 
-. ~/.maven_bash_completion.bash
-
 hr(){ printf '%0*d' $(tput cols) | tr 0 ${1:-_}; }
+
+single-monitor() {
+  echo xrandr --output $3 --off xrandr --output $1 --mode $2
+  xrandr --output $3 --off && xrandr --output $1 --mode $2
+}
+
+multi-monitor() {
+  echo xrandr --output $1 --mode $2 --output $3 --mode $4 --left-of $1 $5
+  xrandr --output $1 --mode $2 --output $3 --mode $4 --left-of $1 $5
+}
